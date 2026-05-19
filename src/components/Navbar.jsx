@@ -18,7 +18,7 @@ function Navbar({ user, setUser }) {
         <>
         <Link className='nav-item' to='/dashboard'>Dashboard</Link>
 
-        <span className='nav-item'>{user.username}</span>
+        <span className='nav-item'>{user.username}</span>c
        
         <button className='nav-item' onClick={logOut}>Log Out</button>
 
