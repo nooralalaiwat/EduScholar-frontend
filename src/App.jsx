@@ -9,8 +9,9 @@ import Scholarships from './pages/Scholarships';
 import ScholarshipDetails from './pages/UniversitiesDetails';
 import Universities from './pages/Universities';
 import MyApplications from './pages/MyApplications';
-
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+
 function App() {
 
 const [user, setUser] = useState(null);
