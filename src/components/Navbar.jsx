@@ -1,4 +1,4 @@
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 function Navbar({ user, setUser }) {
 
@@ -16,9 +16,15 @@ function Navbar({ user, setUser }) {
       {user ? (
         // Links for protected routes only for logged in users
         <>
-        <Link className='nav-item' to='/dashboard'>Dashboard</Link>
-
-        <span className='nav-item'>{user.username}</span>
+        <Link className='nav-item' to='/Unversities'>
+        Unversities
+        </Link>
+          <Link className='nav-item' to='/my-applications'>
+          MyApplications
+          </Link>
+        <span className='nav-item'>
+          {user.username}
+          </span>
        
         <button className='nav-item' onClick={logOut}>Log Out</button>
 

@@ -6,7 +6,7 @@ import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import Profile from './pages/Profile';
 import Scholarships from './pages/Scholarships';
-import ScholarshipDetails from './pages/ScholarshipDetails';
+import ScholarshipDetails from './pages/UniversitiesDetails';
 import Universities from './pages/Universities';
 import MyApplications from './pages/MyApplications';
 
@@ -24,7 +24,7 @@ if (token) {
 try {
 
 const userInfo = JSON.parse(
-atob(token.split('. ')[1])
+  atob(token.split('.')[1])
 ).payload;
 
 setUser(userInfo);
