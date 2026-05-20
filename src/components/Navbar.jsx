@@ -1,4 +1,4 @@
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 function Navbar({ user, setUser }) {
 
@@ -18,7 +18,7 @@ function Navbar({ user, setUser }) {
         <>
         <Link className='nav-item' to='/dashboard'>Dashboard</Link>
 
-        <span className='nav-item'>{user.username}</span>c
+        <span className='nav-item'>{user.username}</span>
        
         <button className='nav-item' onClick={logOut}>Log Out</button>
 
