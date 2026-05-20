@@ -1,40 +1,64 @@
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 function Navbar({ user, setUser }) {
 
-
-  function logOut(){
+  function logOut() {
     localStorage.removeItem('token')
     setUser(null)
   }
 
   return (
-    <div>
-      {/* Routes seen by everyone */}
-      <Link className='nav-item' to='/'>Homepage</Link>
+    <nav>
+
+      {/* Public Routes */}
+      <Link className='nav-item' to='/'>
+        Homepage
+      </Link>
+
+      <Link className='nav-item' to='/universities'>
+        Universities
+      </Link>
+
+      <Link className='nav-item' to='/scholarships'>
+        Scholarships
+      </Link>
 
       {user ? (
-        // Links for protected routes only for logged in users
         <>
-        <Link className='nav-item' to='/dashboard'>Dashboard</Link>
+          {/* Protected Routes */}
+          <Link className='nav-item' to='/profile'>
+            Profile
+          </Link>
 
-        <span className='nav-item'>{user.username}</span>
-       
-        <button className='nav-item' onClick={logOut}>Log Out</button>
+          <Link className='nav-item' to='/my-applications'>
+            My Applications
+          </Link>
 
+          <span className='nav-item'>
+            {user.username}
+          </span>
 
+          <button
+            className='nav-item'
+            onClick={logOut}
+          >
+            Log Out
+          </button>
         </>
-      ) :
-      (
-        // links for not logged in users
+      ) : (
         <>
-        <Link className='nav-item' to='/sign-up'>Sign up</Link>
-        <Link className='nav-item' to='/sign-in'>Sign in</Link>
+          {/* Guest Routes */}
+          <Link className='nav-item' to='/sign-up'>
+            Sign Up
+          </Link>
 
+          <Link className='nav-item' to='/sign-in'>
+            Sign In
+          </Link>
         </>
-      )
-      }
-    </div>
+      )}
+
+    </nav>
   )
 }
 

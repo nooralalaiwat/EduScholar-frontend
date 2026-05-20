@@ -1,0 +1,11 @@
+const Profile = ({ user }) => {
+  return (
+    <div>
+      <h1>Profile</h1>
+
+      <p>Username: {user?.username}</p>
+    </div>
+  )
+}
+
+export default Profile

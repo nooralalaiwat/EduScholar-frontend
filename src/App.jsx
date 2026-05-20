@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-
+import './App.css'
 import Homepage from './pages/Homepage';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
@@ -8,83 +8,96 @@ import Profile from './pages/Profile';
 import Scholarships from './pages/Scholarships';
 import ScholarshipDetails from './pages/ScholarshipDetails';
 import Universities from './pages/Universities';
+import UniversityDetails from './pages/UniversityDetails'
+import ApplyScholarship from './pages/ApplyScholarship'
 import MyApplications from './pages/MyApplications';
 
 import Navbar from './components/Navbar';
 function App() {
 
-const [user, setUser] = useState(null);
+    const [user, setUser] = useState(null);
 
-useEffect(() => {
+    useEffect(() => {
 
-const token = localStorage.getItem('token');
+        const token = localStorage.getItem('token');
 
-if (token) {
+        if (token) {
 
-try {
+            try {
 
-const userInfo = JSON.parse(
-atob(token.split('. ')[1])
-).payload;
+                const userInfo = JSON.parse(
+                    atob(token.split('.')[1])
+                ).payload;
 
-setUser(userInfo);
-} catch (err) {
+                setUser(userInfo);
+            } catch (err) {
 
-localStorage.removeItem('token');
-setUser(null);
+                localStorage.removeItem('token');
+                setUser(null);
 
-}
+            }
 
-}
+        }
 
-}, []);
+    }, []);
 
-return (
-<div>
+    return (
+        <div>
 
-<Navbar user={user} setUser={setUser} />
+            <Navbar user={user} setUser={setUser} />
 
-<Routes>
+            <Routes>
 
-<Route path='/' element={<Homepage />} />
+                <Route path='/' element={<Homepage />} />
 
-<Route
-path='/sign-up'
-element={!user ? <SignUp /> : <Navigate to='/' />}
-/>
-<Route
-path='/sign-in'
-element={!user ? <SignIn setUser={setUser} /> : <Navigate to='/' />}
-/>
+                <Route
+                    path='/sign-up'
+                    element={!user ? <SignUp /> : <Navigate to='/' />}
+                />
+                <Route
+                    path='/sign-in'
+                    element={!user ? <SignIn setUser={setUser} /> : <Navigate to='/' />}
+                />
 
-<Route
-path='/profile'
-element={user ? <Profile user={user} /> : <Navigate to='/sign-in' />}
-/>
+                <Route
+                    path='/profile'
+                    element={user ? <Profile user={user} /> : <Navigate to='/sign-in' />}
+                />
 
-<Route
-path='/scholarships'
-element={<Scholarships />}
-/>
+                <Route
+                    path='/scholarships'
+                    element={<Scholarships />}
+                />
 
-<Route
-path='/scholarship/:id'
-element={<ScholarshipDetails user={user} />}
-/>
+                <Route
+                    path='/scholarships/:id'
+                    element={<ScholarshipDetails user={user} />}
+                />
 
-<Route
-path='/universities'
-element={<Universities />}
-/>
-<Route
-path='/my-applications'
-element={user ? <MyApplications user={user} /> : <Navigate to='/sign-in' />}
-/>
+                <Route
+                    path='/universities'
+                    element={<Universities />}
+                />
 
-</Routes>
+                <Route
+                    path='/universities/:id'
+                    element={<UniversityDetails />}
+                /> 
 
-</div>
-);
+                <Route
+                    path='/apply/:id'
+                    element={user ? <ApplyScholarship user={user} /> : <Navigate to='/sign-in' />}
+                />
+
+                <Route
+                    path='/my-applications'
+                    element={user ? <MyApplications user={user} /> : <Navigate to='/sign-in' />}
+                />
+
+            </Routes>
+
+        </div>
+    );
 }
 
 export default App;
