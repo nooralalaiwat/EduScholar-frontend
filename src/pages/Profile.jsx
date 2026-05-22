@@ -1,7 +1,9 @@
+import '../App.css'
+
 
 function Profile(){
     return(
-        <div className="from-page">
+        <div className="form-page">
             <from className="from">
                 <h1>acadimic Profile</h1>
                 <input type="text" placeholder="Name"/>
