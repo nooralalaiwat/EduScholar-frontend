@@ -1,0 +1,83 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f3f2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.auth-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(163, 116, 111, 0.08);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.auth-card h1 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #7a2021;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #8a6865;
+  font-weight: 600;
+}
+
+.form-group input {
+  padding: 12px 16px;
+  border: 1px solid #dcd1cf;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #faf8f7;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #b07d77;
+  box-shadow: 0 0 0 3px rgba(176, 125, 119, 0.15);
+  background-color: #ffffff;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #b86566, #9c4c4d);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 25px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(156, 76, 77, 0.2);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #a35455, #853d3e);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(156, 76, 77, 0.3);
+}

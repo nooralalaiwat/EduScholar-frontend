@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import Homepage from './pages/Homepage';
-import SignUp from './pages/SignUp';
+import SignUp from './pages/Signup';
 import SignIn from './pages/SignIn';
 import Profile from './pages/Profile';
 import Scholarships from './pages/Scholarships';
@@ -83,7 +83,7 @@ element={user ? <MyApplications user={user} /> : <Navigate to='/sign-in' />}
 />
 
 </Routes>
-
+<Footer />
 </div>
 );
 }

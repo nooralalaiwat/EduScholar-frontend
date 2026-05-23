@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
+import './signup.css';
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -27,34 +28,42 @@ function Signup() {
   };
 
   return (
-    <div>
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="username">Username:</label>
-          <input
-            id="username"
-            name="username"
-            type="text"
-            value={formData.username}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Sign Up</button>
-      </form>
-      {errorMessage && <p style={{ color: 'red' }} role="alert">{errorMessage}</p>}
+    <div className="auth-container">
+      <div className="auth-card">
+        <h1>Sign Up</h1>
+        
+        <form onSubmit={handleSubmit} className="auth-form">
+          <div className="form-group">
+            <label htmlFor="username">Username</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              value={formData.username}
+              onChange={handleChange}
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+          
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              value={formData.password}
+              onChange={handleChange}
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          
+          <button type="submit" className="submit-btn">Sign Up</button>
+        </form>
+        
+        {errorMessage && <p style={{ color: 'red', marginTop: '15px' }} role="alert">{errorMessage}</p>}
+      </div>
     </div>
   );
 }

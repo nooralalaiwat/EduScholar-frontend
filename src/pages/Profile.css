@@ -1,0 +1,120 @@
+.form-page {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #E5E1DC;
+  padding: 60px 8%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.form-title {
+  font-size: 3rem;
+  color: #802626;
+  margin: 0 0 50px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+
+.form-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 250px;
+}
+
+.form-column.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+.input-group label {
+  color: #802626;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.input-group .country-label {
+  color: #2F5665;
+}
+
+.input-group input {
+  background-color: #F0EDE9;
+  border: none;
+  border-radius: 12px;
+  padding: 18px 20px;
+  font-size: 1.1rem;
+  color: #333333;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.input-group input::placeholder {
+  color: #A8A4A1;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper select {
+  background-color: #F0EDE9;
+  border: none;
+  border-radius: 12px;
+  padding: 18px 20px;
+  font-size: 1.1rem;
+  color: #333333;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: border-box;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  font-size: 0.8rem;
+  color: #000000;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.submit-btn {
+  background-color: #802626;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 25px;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 40px;
+  white-space: nowrap;
+}

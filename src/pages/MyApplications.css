@@ -1,0 +1,115 @@
+.applications-container {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #E5E1DC;
+  padding: 60px 8%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.applications-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.applications-title {
+  font-size: 3rem;
+  color: #802626;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+
+.applications-subtitle {
+  font-size: 1.2rem;
+  color: #555555;
+  margin: 0;
+}
+
+.applications-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.application-card {
+  background-color: #F0EDE9;
+  border-radius: 16px;
+  padding: 25px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.card-header h2 {
+  font-size: 1.4rem;
+  color: #802626;
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+
+.card-country {
+  font-size: 1rem;
+  color: #2F5665;
+  font-weight: 500;
+}
+
+.card-body {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.05rem;
+}
+
+.info-label {
+  color: #777777;
+  font-weight: 500;
+}
+
+.info-value {
+  color: #333333;
+  font-weight: 600;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.status-badge {
+  padding: 8px 25px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.status-badge.pending {
+  background-color: #FFE699;
+  color: #8A6D1C;
+}
+
+.status-badge.accepted {
+  background-color: #D4EDDA;
+  color: #155724;
+}
+
+.status-badge.rejected {
+  background-color: #F8D7DA;
+  color: #721C24;
+}

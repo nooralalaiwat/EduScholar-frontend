@@ -1,0 +1,71 @@
+.navbar {
+  background-color: #b48b85;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.navbar-logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-item {
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+  color: #6b1d1d;
+}
+
+.navbar-auth {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-name {
+  color: #6b1d1d;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.btn-auth {
+  background-color: #a8625a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  display: inline-block;
+  outline: none;
+}
+
+.btn-auth:hover {
+  transform: scale(1.05);
+  background-color: #6b1d1d;
+}
+
+.logout-btn {
+  font-family: sans-serif;
+}
